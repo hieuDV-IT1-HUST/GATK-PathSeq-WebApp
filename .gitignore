@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+venv/
+env/
+ENV/
+.env.*
+
+# Jupyter
+.ipynb_checkpoints
+
+# VSCode
+.vscode/
+
+# Conda
+*.conda
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploads/Results/DB
+backend/app/uploads/
+backend/app/results/
+backend/app/reference_db/
+backend/app/*.sqlite3
+backend/app/*.db
+
+# Node
+node_modules/
