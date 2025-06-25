@@ -25,9 +25,9 @@ ENV/
 Thumbs.db
 
 # Uploads/Results/DB
-backend/app/uploads/
-backend/app/results/
-backend/app/reference_db/
+backend/uploads/
+backend/results/
+backend/jobs/
 backend/app/*.sqlite3
 backend/app/*.db
 

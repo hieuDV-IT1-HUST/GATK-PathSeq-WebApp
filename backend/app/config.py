@@ -1,11 +1,10 @@
-# Config placeholder
 
 # Config for MySQL connection
 import os
 
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY', 'dev')
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:password@localhost/PATHSEQ'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root@localhost/PATHSEQ'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOAD_FOLDER = 'app/uploads'
     RESULT_FOLDER = 'app/results'

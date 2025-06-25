@@ -3,28 +3,36 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-export default function Home() {
+export default function Welcome() {
   const router = useRouter();
 
   return (
-      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-          <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <>
+          <div
+              className="fixed inset-0 -z-10 bg-cover bg-center"
+              style={{
+                  backgroundImage: "url(/Full_Moon.jpg)",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+              }}
+          />
+          <main className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-[32px] items-center text-center text-white drop-shadow-lg bg-black/60 px-16 py-10 rounded-lg z-10 max-w-full w-[min(100vw,600px)] border border-white/20 backdrop-blur-md">
               <Image
-                  className="dark:invert"
-                  src="/broad-institute.svg"
-                  alt="Next.js logo"
+                  src="/broad-institute.png"
+                  alt="Broad Institute logo"
                   width={180}
                   height={38}
                   priority
               />
-              <h1 className="text-2xl font-bold text-center mb-4">
-                  Chào mừng đến với GATK PathSeq WebApp
-              </h1>
-              <p className="text-center mb-6">
+              <h1 className="text-2xl font-bold mb-2">Chào mừng đến với</h1>
+              <div className="text-3xl font-extrabold mb-4 text-blue-300">
+                  GATK PathSeq WebApp
+              </div>
+              <p className="mb-6">
                   Vui lòng đăng nhập, đăng ký hoặc lấy lại mật khẩu để tiếp tục
                   sử dụng hệ thống.
               </p>
-              <div className="flex flex-col gap-4 w-full max-w-xs">
+              <div className="flex flex-col gap-4 w-full max-w-xs mx-auto">
                   <button
                       className="rounded bg-blue-600 text-white py-2 px-4 font-semibold hover:bg-blue-700 transition-colors"
                       onClick={() => router.push("/login")}
@@ -45,7 +53,7 @@ export default function Home() {
                   </button>
               </div>
           </main>
-          <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+          <footer className="fixed bottom-6 left-1/2 -translate-x-1/2 flex gap-[24px] flex-wrap items-center justify-center text-white drop-shadow-lg bg-black/60 px-6 py-2 rounded-lg z-10 border border-white/20 backdrop-blur-md">
               <a
                   className="flex items-center gap-2 hover:underline hover:underline-offset-4"
                   href="https://soict.hust.edu.vn/"
@@ -88,6 +96,6 @@ export default function Home() {
                   hieu.dv224980@sis.hust.edu.vn
               </a>
           </footer>
-      </div>
+      </>
   );
 }
